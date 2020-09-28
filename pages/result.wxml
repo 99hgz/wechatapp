@@ -1,0 +1,26 @@
+<view>
+  <text class="window">Toonaive.top</text>
+  <view class='main'>
+    <view class='table'>
+      <view class='tr'>
+        <view class='th' style="width:15%">OJ</view>
+        <view class='th' style="width:55%">Name</view>
+        <view class='th' style="width:30%">Time</view>
+      </view>
+      <block wx:for="{{inf}}">
+      
+        <view wx:if="{{(index % 2) == 0}}" class='tr evenrow'>
+          <view class='td' style="width:15%">{{item[4]}}</view>
+          <view class="{{item[5]==1?_ac:_wa}}" style="width:55%">{{item[0]}}</view>
+          <view class='td' style="width:30%;white-space:nowrap;">{{item[3]}}</view>
+        </view>
+        <view wx:if="{{(index % 2) == 1}}" class='tr oddrow'>
+          <view class='td' style="width:15%">{{item[4]}}</view>
+          <view class="{{item[5]==1?_ac:_wa}}" style="width:55%">{{item[0]}}</view>
+          <view class='td' style="width:30%;white-space:nowrap;">{{item[3]}}</view>
+        </view>
+      </block>
+    </view>
+    <button class='close' catchtap='close'>关闭</button>
+  </view>
+</view>

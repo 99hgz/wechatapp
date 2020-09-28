@@ -1,0 +1,37 @@
+<!--pages/index.wxml-->
+<view>
+  <text catchtap='click' class="{{color}}">Toonaive.top</text>
+  <view class='main'>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{grouparray}}">
+      <view class="picker">
+        选择组：{{grouparray[index]}}
+        <text></text>
+      </view>
+    </picker>
+    <view class='table'>
+      <view class='tr bg-b'>
+        <view class='th' style="width:30%">OJ</view>
+        <view class='th' style="width:60%">Name</view>
+        <view class='th' style="width:10%" catchtap='bindadd'><text style="color: #fff;font-size:35px;"> +</text></view>
+      </view>
+      <block wx:for="{{o2n}}" wx:key='unique'>
+        <view class='tr'>
+          <view class='td' style="width:30%">
+            <picker bindchange="bindojchange" value="{{oj2id[item.oj]}}" range="{{id2oj}}" style="width:100%;" id='{{item.id}}'>
+              <view class="td ojpicker" style="width:100%;">
+                {{item.oj}}
+              </view>
+            </picker>
+          </view>
+          <view class='td' style="width:60%">
+            <input value='{{item.name}}' confirm-type='done' bindblur="namesaver" bindconfirm="namesaver" id='{{item.id}}'></input>
+          </view>
+          <view class='td' style='width:10%' catchtap='binddel' id='{{item.id}}'><text style="color: red;">✕</text></view>
+        </view>
+      </block>
+    </view>
+    <button class='delb' catchtap='delgroup'>删除</button>
+    <button class='saveb' catchtap='savegroup'>保存</button>
+    <button class='queryb' catchtap='querygroup'>查询</button>
+  </view>
+</view>

@@ -1,0 +1,82 @@
+/* pages/index.wxss */
+.window{
+  color:#4995fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.window-red{
+  color:red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main{
+  position: absolute;
+  top:10%;
+  right:10px;
+  left:10px;
+}
+.picker{
+  position: relative;
+  padding:10px;
+  border:3px solid #4995fa;
+}
+.picker text{
+	border-color: #4995fa #fff #fff;
+	border-style: solid;
+	border-width: 15px;
+	position:absolute;
+	top:13px;
+  right:10px;
+}
+.table{
+  border:3px solid #4995fa;
+  position: relative;
+  top:10px;
+}
+.th {
+  justify-content: center;
+  background: #4995fa;
+  color: #fff;
+  display: flex;
+  height: 50px;
+  align-items: center;
+}
+.tr{
+  display: flex;
+  border:1px none gray;
+  border-style:none none solid none; 
+}
+.td {
+  justify-content: center;
+  display: flex;
+  height: 2rem;
+  align-items: center;
+}
+.td input{
+  text-align:center;
+}
+.delb{
+  display: inline-block;
+  position: relative;
+  top:20px;
+  width:25%;
+}
+.saveb{
+  display: inline-block;
+  position: relative;
+  top:20px;
+  width:25%;
+}
+.queryb{
+  display: inline-block;
+  position: relative;
+  top:20px;
+  width:50%;
+  background-color: #4995fa;
+  color:#fff;
+}
+
+
+

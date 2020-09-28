@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "pages/index",
+    "pages/result"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "查水表Pro",
+    "navigationBarTextStyle": "black"
+  }
+}
